@@ -1,0 +1,35 @@
+server:
+  port: 5000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka/ #注册中心地址
+  instance:
+    prefer-ip-address: true
+    instance-id: resource1-server:5000  #指定服务的id
+
+spring:
+  application:
+    name: nosql-server
+  redis:
+    # Redis默认情况下有16个分片，这里配置具体使用的分片。默认是索引为0的分片
+    database: 1
+    # Redis服务器地址
+    host: 127.0.0.1
+    # Redis端口
+    port: 6379
+    # 连接超时时间（毫秒）
+    timeout: 5000
+    # 配置文件中添加 lettuce.pool 相关配置，则会使用到lettuce连接池
+    lettuce:
+      pool:
+        # 连接池最大连接数（使用负值表示没有限制） 默认 8
+        max-active: 8
+        # 连接池中的最大空闲连接 默认 8
+        max-idle: 8
+        # 连接池中的最小空闲连接 默认 0
+        min-idle: 10
+        # 连接池最大阻塞等待时间（使用负值表示没有限制） 默认 -1
+        max-wait: 100000
+

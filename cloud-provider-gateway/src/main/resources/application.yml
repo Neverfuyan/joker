@@ -1,0 +1,51 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1000/eureka/ #注册中心地址
+  instance:
+    prefer-ip-address: true #使用ip地址注册
+    instance-id: zuul-server:2000  #指定服务的id
+server:
+  port: 2000
+#zuul:
+#  ignored-services: "*"   #禁止使用服务名字进行访问
+#  prefix: "/servers"  #统一的前缀
+#  routes: #配置路由，指定服务的访问路径
+#    resource1-server: "/resources/**"
+spring:
+  application:
+    name: zuul-server
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true  # 启用自动根据服务ID生成路由
+          lower-case-service-id: true  # 设置路由的路径为小写的服务ID
+      routes:
+        - id: system-server
+          uri: lb://system-server
+          predicates:
+            - Path=/system-server/**
+          filters:
+              - StripPrefix=1 # 移除前缀 system-server
+        - id: resource1-server
+          uri: lb://resource1-server
+          predicates:
+            - Path=/resource1-server/**
+          filters:
+            - StripPrefix=1 # 移除前缀 resource1-server
+swagger:
+  enable: true
+  application-name: ${spring.application.name}
+  application-version: 1.0
+  application-description: springfox swagger 3.0
+  try-host: http://localhost:${server.port}
+  package: com.wj
+  description : <div style='font-size:14px;color:red;'>资源服务管理接口</div>
+  enabled: true
+  title: 平台 RESTful APIs 接口文档
+  serverUrl:
+  version: 3.0
+  contact:
+    author: actor
+    url:  127.0.0.1:2000

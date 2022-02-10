@@ -1,0 +1,36 @@
+server:
+  port: 6001
+
+#eureka注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka/ #注册中心地址
+  instance:
+    prefer-ip-address: true
+    instance-id:  resource1-server:6000  #指定服务的id
+
+#spring—name
+spring:
+  application:
+    name: system-server
+#数据源配置
+  datasource:
+    username: root
+    password: password
+    url: jdbc:mysql://localhost:3306/myself?characterEncoding=UTF-8&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      initial-size: 5      # 初始化时建立物理连接的个数
+      max-active: 10 #最大连接数是10
+      min-idle: 5 #最小连接数是5
+      max-wait: 30000 #获取连接时最大等待时间，单位毫秒
+      time-between-eviction-runs-millis: 60000 #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+#日志
+logging:
+  config: classpath:logback.xml
+
+
