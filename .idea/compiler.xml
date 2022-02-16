@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="cloud-provider-job" />
         <module name="untitled" />
+        <module name="cloud-provider-file" />
         <module name="cloud-provider-nosql" />
         <module name="common" />
         <module name="cloud-provider-eureka" />

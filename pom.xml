@@ -19,6 +19,7 @@
     <module>cloud-provider-system</module>
     <module>common</module>
       <module>cloud-provider-job</module>
+      <module>cloud-provider-file</module>
   </modules>
 
   <name>root</name>

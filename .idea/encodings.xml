@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/cloud-provider-auth/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-provider-eureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-provider-eureka/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-provider-file/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-provider-file/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-provider-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-provider-gateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-provider-job/src/main/java" charset="UTF-8" />

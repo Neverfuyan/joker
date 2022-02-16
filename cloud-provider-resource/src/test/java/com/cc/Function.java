@@ -8,9 +8,12 @@ import cn.hutool.core.util.NumberUtil;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.bouncycastle.util.Integers;
 import org.junit.Test;
 
 import java.io.File;
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.*;
 
 /**
@@ -82,7 +85,27 @@ public class Function {
         System.out.println(a);
     }
 
+    @Test
+    public void test5(){
+        try {
+            List<Integer> integers = Arrays.asList(new Integer[]{1, null, 2, 3, 4});
+            for (int i = 0; i <integers.size() ; i++) {
+                Integer integer = integers.get(i);
+                String s = integer.toString();
+                String update = update(s);
+                System.out.println(update);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
+    public static String update(String a){
+        String b = "6";
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append(a);
+        return stringBuffer.toString();
+    }
 
     @AllArgsConstructor
     @NoArgsConstructor
