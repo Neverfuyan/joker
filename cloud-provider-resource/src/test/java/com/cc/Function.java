@@ -8,6 +8,7 @@ import cn.hutool.core.util.NumberUtil;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.apache.commons.io.FileUtils;
 import org.bouncycastle.util.Integers;
 import org.junit.Test;
 
@@ -98,6 +99,14 @@ public class Function {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+
+    @Test
+    public void test8() throws Exception {
+        File file = new File("D:\\data\\jpg\\1.jpg");
+        File newfile = new File( "D:\\data"+File.separator+"避雷器测温2022-01-12-19-50-41.jpg");
+        FileUtils.copyFile(file, newfile, false);
     }
 
     public static String update(String a){

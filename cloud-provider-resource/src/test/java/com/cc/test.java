@@ -9,6 +9,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.wj.springcloud.utils.SnowflakeIdWorker;
+import org.apache.commons.io.FileUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -171,6 +172,13 @@ public class test extends BaseTest {
     public void test7() throws Exception {
         File file = FileUtil.file("E:\\360MoveData\\Users\\actor\\Desktop\\1.xls");
         String type = FileTypeUtil.getType(file);
+    }
+
+    @Test
+    public void test8() throws Exception {
+        File file = new File("D:\\data\\jpg\\1.jpg");
+        File newfile = new File( "D:\\data\\2.jpg");
+        FileUtils.copyFile(file, newfile, false);
     }
 
 }
