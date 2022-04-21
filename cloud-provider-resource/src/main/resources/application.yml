@@ -53,6 +53,23 @@ mybatis:
 logging:
   config: classpath:logback.xml
 
+swagger:
+  enable: true
+  application-name: ${spring.application.name}
+  application-version: 1.0
+  application-description: springfox swagger 3.0
+  try-host: http://localhost:${server.port}
+  package: com.wj
+  description : <div style='font-size:14px;color:red;'>资源服务管理接口</div>
+  enabled: true
+  title: 平台 RESTful APIs 接口文档
+  serverUrl:
+  version: 3.0
+  contact:
+    author: actor
+    url:  127.0.0.1:2000
+
+
 
 
 

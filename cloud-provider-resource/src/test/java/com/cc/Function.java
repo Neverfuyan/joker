@@ -109,6 +109,13 @@ public class Function {
         FileUtils.copyFile(file, newfile, false);
     }
 
+    @Test
+    public void test9(){
+        int a = 2<<3;
+        int b = 2>>2;
+        System.out.println(a+":"+b);
+    }
+
     public static String update(String a){
         String b = "6";
         StringBuffer stringBuffer = new StringBuffer();

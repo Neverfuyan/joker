@@ -20,6 +20,8 @@
     <module>common</module>
       <module>cloud-provider-job</module>
       <module>cloud-provider-file</module>
+    <module>cloud-provider-netty</module>
+    <module>template</module>
   </modules>
 
   <name>root</name>
@@ -53,13 +55,15 @@
     <hutool.version>5.7.7</hutool.version>
     <easyexcel.version>2.2.4</easyexcel.version>
     <swagger.version>3.0.0</swagger.version>
-    <knife4j.version>3.0.1</knife4j.version>
-    <knife4j-micro.version>3.0.1</knife4j-micro.version>
+    <knife4j.version>3.0.2</knife4j.version>
+    <knife4j-micro.version>3.0.2</knife4j-micro.version>
     <xxl-job-version>2.3.0</xxl-job-version>
     <activiti-engine-version>5.16.4</activiti-engine-version>
     <jedis-version>4.1.0</jedis-version>
     <minio-version>8.0.3</minio-version>
     <commons-io-version>2.8.0</commons-io-version>
+    <netty-version>5.0.0.Alpha2</netty-version>
+    <pdfbox-version>1.8.2</pdfbox-version>
   </properties>
 
   <dependencyManagement>
@@ -206,17 +210,30 @@
         <artifactId>jedis</artifactId>
         <version>${jedis-version}</version>
       </dependency>
-
+    <!--  文件上传  -->
       <dependency>
         <groupId>io.minio</groupId>
         <artifactId>minio</artifactId>
         <version>${minio-version}</version>
       </dependency>
 
+    <!--  io 流    -->
       <dependency>
         <groupId>commons-io</groupId>
         <artifactId>commons-io</artifactId>
         <version>${commons-io-version}</version>
+      </dependency>
+  <!--  netty 框架 -->
+      <dependency>
+        <groupId>io.netty</groupId>
+        <artifactId>netty-all</artifactId>
+        <version>${netty-version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.pdfbox</groupId>
+        <artifactId>pdfbox</artifactId>
+        <version>${pdfbox-version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

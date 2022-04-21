@@ -14,8 +14,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  */
 @SpringBootApplication(scanBasePackages = {"com.wj"})
 @EnableEurekaClient
-@EnableFeignClients
-//@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
+@EnableFeignClients//@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
+
 public class FileApplication {
 
     public static void main(String[] args) {

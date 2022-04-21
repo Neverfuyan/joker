@@ -8,17 +8,19 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cloud-provider-job" />
+        <module name="template" />
         <module name="untitled" />
+        <module name="cloud-provider-netty" />
+        <module name="cloud-provider-gateway" />
+        <module name="open-feign" />
+        <module name="cloud-provider-payment8080" />
+        <module name="cloud-provider-resource" />
         <module name="cloud-provider-file" />
         <module name="cloud-provider-nosql" />
         <module name="common" />
         <module name="cloud-provider-eureka" />
         <module name="cloud-provider-system" />
-        <module name="cloud-provider-gateway" />
         <module name="cloud-provider-auth" />
-        <module name="open-feign" />
-        <module name="cloud-provider-payment8080" />
-        <module name="cloud-provider-resource" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

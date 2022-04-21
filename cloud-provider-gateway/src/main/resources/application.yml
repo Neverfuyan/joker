@@ -49,3 +49,8 @@ swagger:
   contact:
     author: actor
     url:  127.0.0.1:2000
+
+knife4j:
+  basic:
+    enable: true
+
